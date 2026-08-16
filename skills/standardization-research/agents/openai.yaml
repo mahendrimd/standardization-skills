@@ -1,0 +1,4 @@
+interface:
+  display_name: "Standardization Research"
+  short_description: "Research evidence for standardization"
+  default_prompt: "Use $standardization-research to investigate this bounded standardization question."

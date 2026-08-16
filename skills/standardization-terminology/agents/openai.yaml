@@ -1,0 +1,4 @@
+interface:
+  display_name: "Standardization Terminology"
+  short_description: "Reconcile terminology for standards"
+  default_prompt: "Use $standardization-terminology to reconcile the terms in this standardization effort."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Standardization Decision"
+  short_description: "Resolve evidence-backed standard decisions"
+  default_prompt: "Use $standardization-decision to resolve this normative question with me."
