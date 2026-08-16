@@ -42,6 +42,14 @@ Use $standardize. I think teams need a shared standard for ...
 
 Working state is local Markdown. Published output follows the consuming repository's document conventions and defaults to `standards/`.
 
+To continue an existing effort, invoke the skill and identify its working directory:
+
+```text
+Use $standardize to continue .standardization/<effort>.
+```
+
+Use the task that dispatched background research until it has collected those results. After the tracker records them, the same prompt also works in a new task.
+
 ## Acknowledgements
 
 The map, frontier, fog, and decision-interview foundations were inspired by Matt Pocock's [`wayfinder` and `grilling` skills](https://github.com/mattpocock/skills). This is an independent project and is not affiliated with or endorsed by Matt Pocock.
