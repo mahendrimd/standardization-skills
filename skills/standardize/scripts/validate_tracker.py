@@ -119,12 +119,15 @@ def validate_effort(effort: Path) -> list[str]:
         phase = field(map_text, "Phase")
         status = field(map_text, "Status")
         assessment = field(map_text, "Assessment")
+        publication_directory = field(map_text, "Publication directory")
         if phase not in PHASES:
             errors.append(f"{map_path}: invalid Phase '{phase}'")
         if status not in MAP_STATUSES:
             errors.append(f"{map_path}: invalid Status '{status}'")
         if assessment not in ASSESSMENTS:
             errors.append(f"{map_path}: invalid Assessment '{assessment}'")
+        if publication_directory is None:
+            errors.append(f"{map_path}: missing field 'Publication directory'")
         missing = MAP_HEADINGS - headings(map_text)
         for name in sorted(missing):
             errors.append(f"{map_path}: missing heading '## {name}'")

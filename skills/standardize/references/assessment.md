@@ -14,23 +14,11 @@ Seek evidence for each applicable test:
 
 When a test does not apply, explain why. Never turn missing evidence into assumed agreement.
 
-## Evidence hierarchy
+## Weigh evidence
 
-Infer the hierarchy for the effort. Rank sources by:
+Assess from resolved research tickets. Across the evidence, compare authority, relevance, independence, currency, and directness. Binding constraints outrank local preferences when they govern the same question; demonstrated practice shows feasibility or prevalence, not what must become normative.
 
-- authority over the claim;
-- relevance to the proposed scope;
-- independence from other sources;
-- currency and observation date;
-- directness rather than commentary about commentary.
-
-Existing upstream standards or binding constraints usually outrank local preferences when they govern the same question. Demonstrated practice shows what is possible and common, not what must become normative. Stakeholder decisions may intentionally choose among viable alternatives; record the trade-off.
-
-## Coverage
-
-Identify material source classes before sampling. Examples include existing standards, current practices, implementations, stakeholder needs, regulations, primary research, incident evidence, or observed failures. These are examples, not required categories.
-
-Cover major representatives in every material class and seek divergent approaches. Stop at saturation: further sampling is unlikely to change the verdict, scope, or a pending normative decision. Record uncovered representatives and uncertainty.
+Before deciding the verdict, confirm that material source classes, divergent approaches, and contradictory evidence are represented. Open a bounded research ticket for any gap that could change the verdict or scope.
 
 ## Verdict
 

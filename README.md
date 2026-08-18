@@ -18,10 +18,13 @@ npx skills add mahendrimd/standardization-skills
 
 The repository follows the [Agent Skills specification](https://agentskills.io/) and the [`skills` CLI repository layout](https://github.com/vercel-labs/skills#skill-discovery).
 
-## Included skills
+## Entry points
 
 - `setup-standardization` configures local working, publication, and versioning conventions.
 - `standardize` coordinates discovery, assessment, resolution, synthesis, validation, and closeout.
+
+The orchestrator invokes these worker skills as needed:
+
 - `standardization-research` gathers bounded, representative evidence while preserving disagreement and uncertainty.
 - `standardization-decision` resolves evidence-backed normative questions with the user.
 - `standardization-terminology` reconciles candidate terms, definitions, aliases, and conflicts.
@@ -40,7 +43,7 @@ Then start with either a clear problem or a loose idea:
 Use $standardize. I think teams need a shared standard for ...
 ```
 
-Working state is local Markdown. Published output follows the consuming repository's document conventions and defaults to `standards/`.
+Working state is local Markdown. Published output follows the complete repository-relative directory pattern selected during setup, such as `standards/{standard_slug}/v{version}` for a versioned collection.
 
 To continue an existing effort, invoke the skill and identify its working directory:
 

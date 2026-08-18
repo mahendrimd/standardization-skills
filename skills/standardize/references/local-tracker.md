@@ -4,7 +4,7 @@ The tracker coordinates active work. It is not the published standard and is com
 
 ## Layout
 
-Use configured paths when present. Defaults:
+Use the configured working directory and resolved publication directory. With the default working directory, the layout is:
 
 ```text
 .standardization/
@@ -15,11 +15,10 @@ Use configured paths when present. Defaults:
     evidence/
     tickets/
       01-<slug>.md
-standards/
-  <standard>/
-    standard.md
-    decisions/
-    evidence.md
+<resolved-publication-directory>/
+  <standard or assessment>.md
+  decisions/
+  evidence.md
 ```
 
 Create directories lazily.
@@ -31,6 +30,7 @@ Copy `assets/map-template.md`. The map is a low-resolution index containing:
 - provisional or accepted standardization aim;
 - current phase and effort status;
 - current assessment verdict;
+- publication directory or unresolved state;
 - standing notes;
 - named links to active material decisions;
 - Fog that cannot yet be phrased as tickets;

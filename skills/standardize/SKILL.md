@@ -1,6 +1,6 @@
 ---
 name: standardize
-description: Create or revise an evidence-backed standard document from a problem statement, desired outcome, or loose belief that shared expectations would help. Use for multi-session standardization efforts requiring discovery, feasibility assessment, research, human decisions, synthesis, validation, and durable rationale; valid results include a complete standard, a stable subset, a deferral assessment, or a recommendation not to standardize.
+description: Run a tracked, evidence-backed standardization effort from discovery through an accepted standard or assessment.
 ---
 
 # Standardize
@@ -9,13 +9,14 @@ The destination is an accepted standard document—or an evidence-backed assessm
 
 ## Load the contract
 
-1. Read `.standardization/config.md` when present. Otherwise default working state to `.standardization/<effort>/` and publication to `standards/<standard>/`.
-2. Read [references/lifecycle.md](references/lifecycle.md) and [references/local-tracker.md](references/local-tracker.md) before creating or working an effort.
-3. Read a phase reference only when entering that phase:
+1. Require `.standardization/config.md` with `Working directory`, `Publication directory pattern`, `Versioning system`, and `Release preservation`. If the file or a field is absent, ask the user to run `$setup-standardization` first.
+2. Treat its `Publication directory pattern` as the complete directory contract. Substitute only its declared placeholders.
+3. Read [references/lifecycle.md](references/lifecycle.md) and [references/local-tracker.md](references/local-tracker.md) before creating or working an effort.
+4. Read a phase reference only when entering that phase:
    - Assessment: [references/assessment.md](references/assessment.md)
    - Synthesis: [references/document-coverage.md](references/document-coverage.md)
    - final Validation and closeout: [references/closeout.md](references/closeout.md)
-4. Run `scripts/validate_tracker.py <effort-directory>` before selecting work and after structural tracker changes.
+5. Run `scripts/validate_tracker.py <effort-directory>` before selecting work and after structural tracker changes.
 
 ## Distinguish phase from type
 
@@ -64,6 +65,8 @@ Refer to maps and tickets by linked title in human-facing text. Identifiers rema
 ## Synthesize late
 
 Enter Synthesis only after the user accepts the Assessment verdict and active normative decisions are stable enough to compose. Build from active decisions, accepted terminology, and curated evidence. Earlier draft wording has no authority.
+
+Before creating publication artifacts, resolve every placeholder in the configured pattern. `{standard_slug}` is the stable slug for the standardization subject, including a defer or decline outcome; `{version}` is the release value. Literal prefixes come from the pattern. Record the exact repository-relative result in the effort map's `Publication directory` field.
 
 Make the standard independently readable. Keep tracker mechanics outside normative clauses and add provenance pointers only where they help future maintainers.
 
