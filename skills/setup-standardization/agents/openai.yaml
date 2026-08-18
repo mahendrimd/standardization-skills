@@ -1,6 +1,6 @@
 interface:
   display_name: "Setup Standardization"
-  short_description: "Configure local standardization workflows"
+  short_description: "Configure standardization paths and versions"
   default_prompt: "Use $setup-standardization to configure this repository for local standardization work."
 policy:
   allow_implicit_invocation: false

@@ -3,6 +3,7 @@
 Phase: discovery
 Status: active
 Assessment: pending
+Publication directory: unresolved
 
 ## Standardization aim
 
@@ -10,7 +11,7 @@ Assessment: pending
 
 ## Notes
 
-<Standing constraints, configured paths, relevant skills, and version target.>
+<Standing constraints, relevant skills, and publication/version details not captured above.>
 
 ## Decisions
 

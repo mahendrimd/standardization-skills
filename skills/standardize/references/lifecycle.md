@@ -40,8 +40,6 @@ Exit when:
 - remaining uncertainty is represented as a permitted variation, limitation, deferred area, or reassessment trigger;
 - no unresolved ticket blocks synthesis.
 
-Research may run concurrently. Resolve at most one decision or task ticket per session.
-
 ## Synthesis
 
 Purpose: compose either the standard or the assessment from active records.

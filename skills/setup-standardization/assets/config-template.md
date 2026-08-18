@@ -1,10 +1,9 @@
 # Standardization configuration
 
-Working path: .standardization
-Publication path: standards
+Working directory: .standardization
+Publication directory pattern: <complete repository-relative pattern>
 Versioning system: <Git, another system, or none>
-Published version convention: <existing convention or decide at first publication>
-Closeout pruning protection: <versioned or requires confirmation>
+Release preservation: <how directories, document metadata, and history preserve releases>
 
 ## Repository-specific notes
 
