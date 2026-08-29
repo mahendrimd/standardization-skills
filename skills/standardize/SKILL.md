@@ -1,15 +1,15 @@
 ---
 name: standardize
-description: Run a tracked, evidence-backed standardization effort from discovery through an accepted standard or assessment.
+description: Create, revise, or reassess a standard through a tracked, evidence-backed effort ending in an accepted release or assessment.
 ---
 
 # Standardize
 
-The destination is an accepted standard document—or an evidence-backed assessment explaining why standardization should be partial, deferred, or declined. Every ticket must materially advance that destination.
+The destination is an accepted standard release or an evidence-backed assessment. Every ticket must materially advance that destination.
 
 ## Load the contract
 
-1. Require `.standardization/config.md` with `Working directory`, `Publication directory pattern`, `Versioning system`, and `Release preservation`. If the file or a field is absent, ask the user to run `$setup-standardization` first.
+1. Require `.standardization/config.md` with `Working directory`, `Publication directory pattern`, `Versioning system`, `Git command permissions`, and `Release preservation`. If the file or a field is absent, ask the user to run `$setup-standardization` first.
 2. Treat its `Publication directory pattern` as the complete directory contract. Substitute only its declared placeholders.
 3. Read [references/lifecycle.md](references/lifecycle.md) and [references/local-tracker.md](references/local-tracker.md) before creating or working an effort.
 4. Read a phase reference only when entering that phase:
@@ -18,6 +18,14 @@ The destination is an accepted standard document—or an evidence-backed assessm
    - final Validation and closeout: [references/closeout.md](references/closeout.md)
 5. Run `scripts/validate_tracker.py <effort-directory>` before selecting work and after structural tracker changes.
 
+## Select the effort kind
+
+- **Creation** starts without an accepted baseline and may produce a first standard or assessment.
+- **Revision** starts from a released standard and may produce a successor release or a revision assessment that leaves the baseline unchanged.
+- **Reassessment** revisits an accepted subset, defer, or decline assessment and may produce a successor assessment or a first standard.
+
+For revision or reassessment, read [references/revision.md](references/revision.md) before creating or working the effort. It defines the additional configuration, change set, outcome, version review, cutover, and propagation gates. A completed effort is a baseline; start a linked effort rather than reopening its compacted tracker.
+
 ## Distinguish phase from type
 
 - A **phase** is the effort-wide readiness gate: Discovery, Assessment, Resolution, Synthesis, or Validation.
@@ -25,11 +33,11 @@ The destination is an accepted standard document—or an evidence-backed assessm
 
 The phase explains why work belongs now. The ticket question or completion criterion defines what finishes it. A phase never prescribes a fixed ticket list.
 
-## Start an effort
+## Start a creation effort
 
 Accept a loose idea. Uncertainty is the expected starting state.
 
-1. Create a map from `assets/map-template.md`. Record the user's words as a provisional aim; do not silently convert them into a settled problem.
+1. Create a map from `assets/map-template.md`. Set `Effort kind: creation`, identify the standard provisionally, and replace maintenance-only placeholders with `not applicable`. Record the user's words as a provisional aim; do not silently convert them into a settled problem.
 2. Use `$standardization-decision` to establish the first material boundary: what shared expectation may be useful, for whom, and why. Use `$standardization-terminology` when ambiguous language affects that boundary.
 3. Map the visible frontier breadth-first. Create a ticket only when its bounded question or completion criterion can be stated now. Put suspected but unformulable work under **Fog**.
 4. Create tickets before wiring blockers. Use `assets/ticket-template.md` for research and task tickets and `assets/decision-ticket-template.md` for decision tickets.
@@ -40,7 +48,7 @@ If Discovery shows that the entire effort is already clear and fits one session,
 
 ## Continue an effort
 
-1. Load the map as the low-resolution view. Read full bodies only for the selected ticket and directly relevant records.
+1. Load the map as the low-resolution view. Read full bodies only for the selected ticket and directly relevant records. If `Effort kind` is `revision` or `reassessment`, load `references/revision.md`.
 2. Validate the tracker.
 3. Select the first open, unblocked, unclaimed frontier ticket unless the user named one.
 4. Claim it before work by setting `Status: claimed` and `Claimed by:`.
@@ -66,7 +74,7 @@ Refer to maps and tickets by linked title in human-facing text. Identifiers rema
 
 Enter Synthesis only after the user accepts the Assessment verdict and active normative decisions are stable enough to compose. Build from active decisions, accepted terminology, and curated evidence. Earlier draft wording has no authority.
 
-Before creating publication artifacts, resolve every placeholder in the configured pattern. `{standard_slug}` is the stable slug for the standardization subject, including a defer or decline outcome; `{version}` is the release value. Literal prefixes come from the pattern. Record the exact repository-relative result in the effort map's `Publication directory` field.
+Before creating a first publication artifact, require the configured initial version and resolve every placeholder in the configured pattern. `{standard_slug}` is the stable slug for the standardization subject, including a defer or decline outcome; `{version}` is the configured initial release value. Literal prefixes come from the pattern. Record the exact repository-relative result in the effort map's `Publication directory` field. An accepted first standard includes `release.md` from `assets/release-template.md`, using `none` or `not applicable` for predecessor, history, and change-classification fields that do not apply. Run `scripts/validate_release.py <release-directory> --accepted` after exact-bundle acceptance and `--final` before closeout. Maintenance candidates follow `revision.md` and keep the target version provisional until final classification.
 
 Make the standard independently readable. Keep tracker mechanics outside normative clauses and add provenance pointers only where they help future maintainers.
 

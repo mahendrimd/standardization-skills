@@ -6,8 +6,10 @@
 
 ## Material evidence
 
-| Claim or question | Source | Observed/accessed | Supports, challenges, or qualifies | Limits |
-|---|---|---|---|---|
+| Claim or question | Source | Observed/accessed | Evidence role | Supports, challenges, or qualifies | Limits |
+|---|---|---|---|---|---|
+
+`Evidence role` is `original`, `inherited`, or `reviewed for this maintenance effort`.
 
 ## Coverage limits
 

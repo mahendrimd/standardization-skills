@@ -15,6 +15,8 @@ Exit when:
 
 Use research, decision, and task tickets as needed.
 
+For revision or reassessment, Discovery also identifies the baseline artifact and kind, bounds source-report intake, groups confirmed duplicates into change items, and accounts for every selected report. Use `revision.md` for its gate.
+
 ## Assessment
 
 Purpose: decide whether standardization is worthwhile now and how deeply it should reach.
@@ -28,6 +30,8 @@ Read `assessment.md`. The user must accept one verdict:
 
 A standardize verdict advances to Resolution. A defer or decline verdict advances to Synthesis to produce the assessment artifact.
 
+For revision or reassessment, Assessment assigns every change item an accepted, deferred, or rejected direction. A revision also records provisional standard-version impact. It does not assume that a reported issue requires a standard change.
+
 ## Resolution
 
 Purpose: settle the normative substance before prose becomes an anchor.
@@ -40,6 +44,8 @@ Exit when:
 - remaining uncertainty is represented as a permitted variation, limitation, deferred area, or reassessment trigger;
 - no unresolved ticket blocks synthesis.
 
+For revision, every accepted change item must identify the actual candidate change and its compatibility effect. For reassessment, it must identify how the evidence changes or preserves the accepted conclusion.
+
 ## Synthesis
 
 Purpose: compose either the standard or the assessment from active records.
@@ -47,6 +53,8 @@ Purpose: compose either the standard or the assessment from active records.
 Use task tickets for bounded document work. Earlier fragments and ticket wording are inputs, not authoritative clauses. Revisit any section during synthesis when consistency demands it.
 
 Exit when one independently readable artifact covers the accepted outcome, material uncertainty, and its appropriate adoption or evaluation method.
+
+For a standard-release outcome, Synthesis builds an unversioned candidate from the applicable baseline material. For an assessment outcome, it builds a maintenance assessment. The baseline remains authoritative until its successor is accepted.
 
 ## Validation
 
@@ -64,3 +72,5 @@ Exit when:
 - the user accepts the artifact.
 
 Then run closeout.
+
+For a standard-release outcome, Validation also proves bidirectional change traceability, obtains agent and user version review, promotes the accepted bundle, and verifies required publication surfaces. For an assessment outcome, it validates and obtains acceptance of the exact outcome artifact. A tagged release with failed required propagation remains active with propagation blocked.
