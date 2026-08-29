@@ -1,8 +1,19 @@
 # <Effort title>
 
+Effort kind: creation
 Phase: discovery
 Status: active
 Assessment: pending
+Standard identity: <stable name or slug>
+Baseline kind: <not applicable, standard release, or accepted assessment>
+Baseline artifact: <not applicable or repository-relative path>
+Baseline version: <version or not applicable>
+Baseline tag: <tag or not applicable>
+Candidate: <not applicable, not started, drafting, or accepted>
+Propagation: <not applicable, pending, blocked, or complete>
+Target version: <pending, confirmed version, or not applicable>
+Outcome kind: <not applicable, pending, successor release, revision assessment, successor assessment, or first standard>
+Outcome artifact: <not applicable, pending, or repository-relative path>
 Publication directory: unresolved
 
 ## Standardization aim
@@ -16,6 +27,10 @@ Publication directory: unresolved
 ## Decisions
 
 <!-- One named link per active material decision, with a one-line gist. -->
+
+## Change set
+
+<!-- Revision and reassessment only: one named link per working change item with its current disposition. -->
 
 ## Fog
 

@@ -12,7 +12,8 @@ Infer the structure from the subject, adopters, authority, evidence, and request
 - failures, exceptions, and edge cases;
 - adoption or evaluation method appropriate to the subject;
 - limitations, unresolved areas, and reassessment triggers;
-- version and maintenance information;
+- standard identity, version, release status, predecessor, and maintenance information;
+- release changes, compatibility, deprecation, and migration information when revising;
 - evidence and decision references useful to maintainers.
 
 Omit irrelevant material, rename sections in domain language, and add subject-specific coverage. Start in one primary document. Split into indexed modules only when independent concerns, reuse, or document size makes navigation materially better.
